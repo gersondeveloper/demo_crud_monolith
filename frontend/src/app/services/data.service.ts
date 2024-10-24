@@ -7,7 +7,7 @@ import {catchError, Observable, retry, throwError} from 'rxjs';
 })
 export class DataService {
 
-  private apiUrl = "http://localhost:8080/api/";
+  private apiUrl = "http://localhost:8080/api/users";
 
   constructor(private http: HttpClient) { }
 
@@ -29,5 +29,4 @@ export class DataService {
     console.error(errorMessage);
     return throwError(() => new Error(errorMessage));
   }
-
 }
